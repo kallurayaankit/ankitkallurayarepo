@@ -189,14 +189,14 @@ export const projectsData = [
     title: "OmniServe (Hugging Face Space)",
     description: "Unified interface for serving multiple LLM models with quality metrics tracking.",
     tech: ["Gradio", "Transformers", "FastAPI"],
-    repo: null,
+    repo: "https://github.com/kallurayaankit/omniserve",
     demo: "https://huggingface.co/spaces/kallurayaankit/OmniServe"
   },
   {
     title: "Synapse (Hugging Face Space)",
     description: "Interactive tool for testing prompt robustness and monitoring LLM drift.",
     tech: ["Streamlit", "LangSmith", "OpenAI"],
-    repo: null,
+    repo: "https://github.com/kallurayaankit/synapse",
     demo: "https://huggingface.co/spaces/kallurayaankit/Synapse"
   }
 ];
@@ -205,5 +205,5 @@ export const socialLinks = {
   github: "https://github.com/kallurayaankit",
   huggingface: "https://huggingface.co/kallurayaankit",
   linkedin: "https://linkedin.com/in/ankit-kalluraya", // ✅ CHANGE THIS
-  email: "ankit@example.com" // ✅ CHANGE THIS
+  email: "kallurayaankit@gmail.com" // ✅ CHANGE THIS
 };
