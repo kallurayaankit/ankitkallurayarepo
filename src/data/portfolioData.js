@@ -45,159 +45,82 @@ export const skills = {
 };
 
 export const projectsData = [
-  // ========== AI & LLM Projects ==========
   {
-    title: "AI Agent Quality Sandbox",
-    description: "Multi‑agent adversarial testing framework with Doer, Adversary, and Judge agents to evaluate AI systems for security, bias, and correctness.",
-    tech: ["Python", "LangChain", "Claude API", "Pytest"],
-    repo: "https://github.com/kallurayaankit/ai-agent-quality-sandbox",
-    demo: null
+    "title": "ReleaseRadar",
+    "category": "Flagship · AI QA",
+    "description": "A focused regression-testing prototype that exposes gaps in a passing checkout test suite. Freeze assertions, challenge three deliberately seeded bugs, review proposed additions, and rerun unchanged assertions against the corrected build.",
+    "note": "Prepared and imported cases run in the hosted demo. Live test generation requires a configured local server. Scope: one checkout requirement, not release certification.",
+    "tech": [
+      "JavaScript",
+      "OpenAI",
+      "Playwright",
+      "GitHub Actions"
+    ],
+    "repo": "https://github.com/kallurayaankit/release-radar",
+    "demo": "https://releaseradar-sydney-demo.glossychar1.chatgpt.site/",
+    "demoLabel": "Explore demo",
+    "evidence": "https://github.com/kallurayaankit/release-radar#challenge-workflow",
+    "evidenceLabel": "Workflow & evidence"
   },
   {
-    title: "AI Agent Validation Framework",
-    description: "LLM‑as‑a‑Judge framework that validates AI agent responses for required content, sentiment, and hallucinations using parameterised JSON tests.",
-    tech: ["Python", "Pytest", "TextBlob", "GitHub Actions"],
-    repo: "https://github.com/kallurayaankit/ai-agent-validation-framework",
-    demo: null
+    "title": "Jev Flight Agent",
+    "category": "Flagship · Independent AI",
+    "description": "A standalone browser agent for natural-language flight searches. Jev selects typed operations and observed DOM targets; a separate language model supplies field text, and Playwright executes the actions. The loop checks stale page state and bounds execution.",
+    "note": "Local application requiring API keys and Chrome. Includes recorded demonstrations and search-result verification; it is a search prototype, not a booking service.",
+    "tech": [
+      "Python",
+      "Jev / TypeSafe AI",
+      "Playwright"
+    ],
+    "repo": "https://github.com/kallurayaankit/jev-flight-agent",
+    "evidence": "https://github.com/kallurayaankit/jev-flight-agent/blob/main/docs/demo.mp4",
+    "evidenceLabel": "Recorded demonstration"
   },
   {
-    title: "AI Quality Ops Platform",
-    description: "End‑to‑end quality ecosystem with five automated pillars (Data, Accuracy, Security, Performance, Observability) – orchestrates 11 QA microservices.",
-    tech: ["Python", "FastAPI", "Docker", "Railway"],
-    repo: "https://github.com/kallurayaankit/ai-quality-ops-platform",
-    demo: "https://ai-quality-ops.up.railway.app"
+    "title": "Assay",
+    "category": "Supporting · AI evaluation",
+    "description": "Calibrates an LLM judge against human-labeled examples using Cohen's kappa. The default gate blocks uncalibrated scoring; reports retain calibration provenance and track model-call budgets.",
+    "tech": [
+      "Python",
+      "Ollama",
+      "LLM evaluation"
+    ],
+    "repo": "https://github.com/kallurayaankit/assay"
   },
   {
-    title: "Multi‑agent Sandbox",
-    description: "Test sandbox with Doer, Adversary, and Judge agents to evaluate AI responses for security and bias, driven by JSON test scenarios.",
-    tech: ["Python", "LangChain", "Pytest"],
-    repo: "https://github.com/kallurayaankit/multi-agent-sandbox",
-    demo: null
-  },
-
-  // ========== MLOps & Production AI ==========
-  {
-    title: "Churn Prediction Pipeline",
-    description: "End‑to‑end churn prediction ML pipeline with data validation, training, and model registry.",
-    tech: ["Python", "Scikit-learn", "Pandas", "MLflow"],
-    repo: "https://github.com/kallurayaankit/churn-prediction",
-    demo: null
+    "title": "Jev Ticket Router",
+    "category": "Supporting · Independent AI",
+    "description": "A FastAPI prototype that classifies support tickets by team, urgency, and customer sentiment in a batched Jev call. Department confidence below 0.6 sends the ticket to human review.",
+    "note": "Requires a TypeSafe API key. Prototype scope; no production-service claim.",
+    "tech": [
+      "Python",
+      "FastAPI",
+      "Jev"
+    ],
+    "repo": "https://github.com/kallurayaankit/jev-ticket-router"
   },
   {
-    title: "Fraud Detection API",
-    description: "Real‑time fraud detection with drift monitoring using FastAPI, Kafka, Evidently, and Prometheus.",
-    tech: ["Python", "FastAPI", "Kafka", "Prometheus"],
-    repo: "https://github.com/kallurayaankit/fraud-detection-api",
-    demo: null
+    "title": "LLMTestKit",
+    "category": "Supporting · AI QA",
+    "description": "Local-model evaluation and red-team tooling with deterministic checks, a correctness judge, prompt-injection and jailbreak cases, and HTML reports with score provenance.",
+    "note": "Early-stage toolkit. RAG, groundedness, and broader agent evaluation remain roadmap items.",
+    "tech": [
+      "Python",
+      "Ollama",
+      "Red teaming"
+    ],
+    "repo": "https://github.com/kallurayaankit/llmtestkit"
   },
   {
-    title: "Medical Q&A API",
-    description: "Medical Q&A API using RAG and Hugging Face Inference with FastAPI, Chroma, and Docker.",
-    tech: ["Python", "FastAPI", "RAG", "Docker"],
-    repo: "https://github.com/kallurayaankit/medical-qa-api",
-    demo: null
-  },
-  {
-    title: "Model Hub (Content Moderation API)",
-    description: "Real‑time multi‑modal content moderation API for text and images with async inference and explainability.",
-    tech: ["Python", "FastAPI", "Transformers"],
-    repo: "https://github.com/kallurayaankit/model-hub",
-    demo: null
-  },
-  {
-    title: "Active Learning Classifier",
-    description: "Live demo of an active learning text classifier that predicts sentiment and improves over time.",
-    tech: ["Python", "Scikit-learn", "Streamlit"],
-    repo: "https://github.com/kallurayaankit/active-learning-classifier",
-    demo: "https://huggingface.co/spaces/kallurayaankit/active-learning"
-  },
-
-  // ========== Test Automation Frameworks ==========
-  {
-    title: "Playwright Test Automation Framework",
-    description: "Scalable end‑to‑end testing framework with Page Object Model, visual regression, and parallel execution.",
-    tech: ["TypeScript", "Playwright", "Allure", "GitHub Actions"],
-    repo: "https://github.com/kallurayaankit/playwright-framework",
-    demo: null
-  },
-  {
-    title: "Selenium Java Legacy Test Pack",
-    description: "Test automation using Selenium WebDriver, Java, Maven, TestNG, and Page Object Model for SauceDemo.",
-    tech: ["Java", "Selenium", "TestNG", "Maven"],
-    repo: "https://github.com/kallurayaankit/selenium-java-legacy",
-    demo: null
-  },
-  {
-    title: "API Test Suite with Pytest + Schema Validation",
-    description: "REST API testing with pytest, Requests, JSON Schema validation, and Allure reporting. Data‑driven from JSON.",
-    tech: ["Python", "Pytest", "Requests", "Allure"],
-    repo: "https://github.com/kallurayaankit/api-test-suite",
-    demo: null
-  },
-  {
-    title: "Locust Performance Test Suite",
-    description: "Performance & load testing with Locust, simulating real user traffic, measuring p95 latency, and asserting SLA thresholds.",
-    tech: ["Python", "Locust", "Docker", "GitHub Actions"],
-    repo: "https://github.com/kallurayaankit/locust-performance-suite",
-    demo: null
-  },
-  {
-    title: "Mobile Test Automation with Playwright",
-    description: "Mobile web testing using Playwright's device emulation (iPhone 13) – validates responsive UI without Appium.",
-    tech: ["Python", "Playwright"],
-    repo: "https://github.com/kallurayaankit/mobile-test-automation",
-    demo: null
-  },
-  {
-    title: "MongoDB + Playwright Data Validation Pipeline",
-    description: "End‑to‑end data validation: seed MongoDB, perform UI action with Playwright, then assert database state changed correctly.",
-    tech: ["Python", "MongoDB", "Playwright", "Flask"],
-    repo: "https://github.com/kallurayaankit/mongodb-playwright-data-validation",
-    demo: null
-  },
-  {
-    title: "Pact Contract Testing",
-    description: "Consumer‑driven contract testing using the Pact pattern – consumer generates pact, provider verifies in CI.",
-    tech: ["Python", "Pact", "Flask", "GitHub Actions"],
-    repo: "https://github.com/kallurayaankit/pact-contract-testing",
-    demo: null
-  },
-  {
-    title: "Security Test Automation with OWASP ZAP",
-    description: "Automated security scanning pipeline using OWASP ZAP, pytest, and GitHub Actions – fails CI on high/medium risks.",
-    tech: ["Python", "OWASP ZAP", "Docker", "GitHub Actions"],
-    repo: "https://github.com/kallurayaankit/security-zap-automation",
-    demo: null
-  },
-  {
-    title: "Data Quality Validation",
-    description: "Lightweight data quality test suite using pandas and pytest – validates CSV for nulls, duplicate IDs, out‑of‑range values.",
-    tech: ["Python", "Pandas", "Pytest", "GitHub Actions"],
-    repo: "https://github.com/kallurayaankit/data-quality-validation",
-    demo: null
-  },
-  {
-    title: "Data Validation Pipeline",
-    description: "End‑to‑end data validation pipeline integrating MongoDB, Playwright, and Flask.",
-    tech: ["Python", "MongoDB", "Playwright", "Flask"],
-    repo: "https://github.com/kallurayaankit/data-validation-pipeline",
-    demo: null
-  },
-
-  // ========== Hugging Face Spaces (Live Demos) ==========
-  {
-    title: "OmniServe (Hugging Face Space)",
-    description: "Unified interface for serving multiple LLM models with quality metrics tracking.",
-    tech: ["Gradio", "Transformers", "FastAPI"],
-    repo: "https://github.com/kallurayaankit/omniserve",
-    demo: "https://huggingface.co/spaces/kallurayaankit/OmniServe"
-  },
-  {
-    title: "Synapse (Hugging Face Space)",
-    description: "Interactive tool for testing prompt robustness and monitoring LLM drift.",
-    tech: ["Streamlit", "LangSmith", "OpenAI"],
-    repo: "https://github.com/kallurayaankit/synapse",
-    demo: "https://huggingface.co/spaces/kallurayaankit/Synapse"
+    "title": "Playwright Test Automation Framework",
+    "category": "Supporting · Test automation",
+    "description": "Python and Pytest UI automation for SauceDemo, organized with page objects and JSON test data. Includes parallel test execution and a GitHub Actions workflow.",
+    "tech": [
+      "Python",
+      "Pytest",
+      "Playwright"
+    ],
+    "repo": "https://github.com/kallurayaankit/playwright-framework"
   }
 ];
 
