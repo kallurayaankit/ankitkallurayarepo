@@ -16,6 +16,20 @@ export const aboutData = {
 };
 
 export const experienceData = [
+{
+  "company": "Independent",
+  "role": "Independent AI Quality Consultant & Founder",
+  "period": "Aug 2025 – Present",
+  "employment": "Full-time",
+  "location": "Australia · Remote",
+  "points": [
+    "Built a multi-agent adversarial framework (Doer/Adversary/Judge) to detect prompt injections and hallucinations, validating outputs from GPT-4, Claude 3.5 Sonnet, and Llama 3.",
+    "Engineered an AI Agent Validation framework using LLM-as-Judge to establish an AI quality baseline and proactively identify reliability issues before production.",
+    "Architected a mock MCP (Model Context Protocol) server with GitHub Actions CI/CD integration. Public portfolio code demonstrates infrastructure ownership and systems designed to prevent bugs.",
+    "Delivered a fully containerized performance testing suite using Docker and Locust, with enforced p95/SLA thresholds so early-stage teams can validate scalability without dedicated DevOps.",
+    "Partnered directly with developers to integrate testing frameworks into shipping cycles, reducing feedback loops and accelerating release velocity."
+  ]
+},
   {
     company: "iTech Labs (GLI Subsidiary)",
     role: "Senior QA Engineer",
