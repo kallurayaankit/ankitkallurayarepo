@@ -27,3 +27,4 @@ body.motion-off .orb,body.motion-off .orbit{translate:none!important}body.motion
 @media(prefers-reduced-motion:reduce){.orb,.orbit{translate:none!important}.dimension-label{transform:none!important}}
 
 .site-footer{color:#465b74}
+.job ul{list-style:disc}.job li{margin:8px 0}
