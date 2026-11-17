@@ -60,6 +60,23 @@ export const skills = {
 
 export const projectsData = [
   {
+    title: "B-Ram",
+    category: "Recent work · Local-first workspace",
+    description: "A browser workspace for notes, PDFs, bookmarks, and code. Local IndexedDB storage, full-text search, excerpts, and backup keep the working collection on the device.",
+    note: "Optional embeddings and AI features require configuration. A personal workspace prototype, not a claim of production adoption.",
+    tech: ["JavaScript", "IndexedDB", "Search"],
+    repo: "https://github.com/kallurayaankit/b-ram",
+    demo: "https://b-ram.vercel.app/", demoLabel: "Open workspace"
+  },
+  {
+    title: "Orbit Desk Companion",
+    category: "Recent work · Interactive engineering",
+    description: "An interactive Three.js concept with Assembly Arcade: five build missions, component-placement and wiring checks, time playback, and downloadable MP4 recordings.",
+    note: "Sensors and voice are simulated. This is a browser prototype, not validated physical hardware.",
+    tech: ["Three.js", "Simulation", "Interactive testing"],
+    repo: "https://github.com/kallurayaankit/orbit-desk-companion"
+  },
+  {
     "title": "ReleaseRadar",
     "category": "Flagship · AI QA",
     "description": "A focused regression-testing prototype that exposes gaps in a passing checkout test suite. Freeze assertions, challenge three deliberately seeded bugs, review proposed additions, and rerun unchanged assertions against the corrected build.",
@@ -78,9 +95,9 @@ export const projectsData = [
   },
   {
     "title": "Jev Flight Agent",
-    "category": "Flagship · Independent AI",
+    "category": "Adaptation · Browser automation",
     "description": "A standalone browser agent for natural-language flight searches. Jev selects typed operations and observed DOM targets; a separate language model supplies field text, and Playwright executes the actions. The loop checks stale page state and bounds execution.",
-    "note": "Local application requiring API keys and Chrome. Includes recorded demonstrations and search-result verification; it is a search prototype, not a booking service.",
+    "note": "Adaptation of core agent and benchmark work by Gregor Žunič. My verified contributions include documentation, repository housekeeping, and UTF-8 compatibility. Requires API keys and Chrome; a search prototype, not a booking service.",
     "tech": [
       "Python",
       "Jev / TypeSafe AI",
