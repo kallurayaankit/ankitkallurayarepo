@@ -146,7 +146,7 @@ export default function App() {
 
       <section className="section contact" id="contact">
         <div className="section-panel"><p className="eyebrow">05 / CONTACT</p><h2>Let’s talk.</h2><p className="section-lede">I’m happy to talk about test engineering, AI quality, and what you’re building.</p>
-          <div className="actions"><a className="button primary" href={`mailto:${socialLinks.email}`}>Email me <span>↗</span></a><a className="button secondary" href={socialLinks.linkedin}>LinkedIn <span>↗</span></a></div>
+          <div className="actions"><a className="button primary" href={`mailto:${socialLinks.email}`}>Email me <span>↗</span></a><a className="button secondary" href={socialLinks.linkedin}>LinkedIn <span>↗</span></a><a className="button secondary" href="https://x.com/uhnkitcalorieya">X</a><a className="button secondary" href="https://www.youtube.com/@kitcalorieyeah">YouTube</a></div>
           <div className="contact-links"><a href={socialLinks.github}>GitHub ↗</a><a href={socialLinks.huggingface}>Hugging Face ↗</a><a href="/resume.pdf">Résumé ↗</a></div>
         </div>
       </section>
