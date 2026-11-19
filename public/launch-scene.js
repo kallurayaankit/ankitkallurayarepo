@@ -4,6 +4,31 @@
   const canvas = document.getElementById('launch-canvas');
   if (!(canvas instanceof HTMLCanvasElement)) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  let fallbackFrame = 0;
+  const fallback = document.querySelector('.launch-fallback');
+  const fallbackStages = ['', '/launch-ascent.webp', '/launch-orbit.webp'];
+  let fallbackStage = -1;
+  const fallbackPaint = () => {
+    fallbackFrame = 0;
+    if (!fallback || canvas.dataset.renderer === 'webgl') return;
+    const isPaused = reduce.matches || document.getElementById('motion-toggle')?.getAttribute('aria-pressed') === 'true';
+    const limit = document.documentElement.scrollHeight - innerHeight;
+    const p = !isPaused && limit > 0 ? scrollY / limit : 0;
+    const stage = p < .18 ? 0 : p < .67 ? 1 : 2;
+    if (stage === fallbackStage) return;
+    fallbackStage = stage;
+    fallback.style.backgroundImage = stage ? 'url(' + fallbackStages[stage] + ')' : '';
+    fallback.style.backgroundPosition = stage ? '76% center' : '';
+  };
+  const fallbackQueue = () => {
+    if (!fallbackFrame && canvas.dataset.renderer !== 'webgl') fallbackFrame = requestAnimationFrame(fallbackPaint);
+  };
+  addEventListener('scroll', fallbackQueue, { passive: true });
+  addEventListener('resize', fallbackQueue, { passive: true });
+  document.addEventListener('click', (event) => { if (event.target.closest?.('#motion-toggle')) fallbackQueue(); });
+  canvas.addEventListener('webglcontextlost', () => requestAnimationFrame(fallbackPaint));
+  if (reduce.addEventListener) reduce.addEventListener('change', () => requestAnimationFrame(fallbackPaint));
+  fallbackQueue();
   let toggle = null;
   const gl = canvas.getContext('webgl', { antialias: true, alpha: false, depth: true });
   if (!gl) return;
